@@ -14,7 +14,11 @@ class Pet
   end
 
   def save
-    sql = "INSERT INTO pets (name, breed, age, attack_power) VALUES ($1, $2, $3, $4);"
+    if persisted?
+      sql = "UPDATE pets SET name = $1, breed = $2, age = $3, attack_power = $4 WHERE id = #{id};"
+    else
+      sql = "INSERT INTO pets (name, breed, age, attack_power) VALUES ($1, $2, $3, $4);"
+    end
     self.class.conn.exec_params(sql, [@name, @breed, @age, @attack_power])
     true
   rescue PG::Error
@@ -25,6 +29,10 @@ class Pet
     sql = "DELETE FROM pets WHERE id = $1;"
     self.class.conn.exec_params(sql, [@id])
     self # returns the object itself, used in the Rails ActiveRecord lib
+  end
+
+  def persisted?
+    !id.nil?
   end
 
   # Class Methods
