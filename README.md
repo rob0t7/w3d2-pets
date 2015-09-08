@@ -95,6 +95,13 @@ are in the position that they are defined in the schema.
 
 See the Diff to see what we did for this step.
 
+Step 4 - Fetch all the records
+----------------------------------
+
+To fetch all the records we are going to implement the following
+function **Pet.all**. This function will return an array of Pet
+objects.
+
 Requirements
 --------------
 
