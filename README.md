@@ -109,6 +109,13 @@ Time to implement the Pet#destroy function which removes the object
 from the DB.
 
 
+Step 6 - Update a record
+----------------------------
+
+Time to update a record. The way we know whether to use an update call
+as opposed to an **INSERT** we check whether an **id** field exists on
+the object.
+
 Requirements
 --------------
 
