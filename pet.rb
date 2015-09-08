@@ -21,6 +21,12 @@ class Pet
     false
   end
 
+  def destroy
+    sql = "DELETE FROM pets WHERE id = $1;"
+    self.class.conn.exec_params(sql, [@id])
+    self # returns the object itself, used in the Rails ActiveRecord lib
+  end
+
   # Class Methods
 
   def self.find(id)

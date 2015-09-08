@@ -102,6 +102,13 @@ To fetch all the records we are going to implement the following
 function **Pet.all**. This function will return an array of Pet
 objects.
 
+Step 5 - Delete the record
+------------------------------
+
+Time to implement the Pet#destroy function which removes the object
+from the DB.
+
+
 Requirements
 --------------
 
