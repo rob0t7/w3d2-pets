@@ -3,19 +3,19 @@ W3D2 - Homebrewed ORM
 
 ORM == "Object Relational Mapper"
 
-When we write code in Ruby we think and use *objects*. However when we
-write code for relational databases when use *SQL* which is text
+When we write code in Ruby we think and use **objects**. However when we
+write code for relational databases when use **SQL** which is text
 based. Wouldn't it be nice to write database code and values using
-*objects* instead of text.
+**objects** instead of text.
 
-Well you can! Today we are going to write our own *basic*, and I mean
-basic *ORM*.
+Well you can! Today we are going to write our own **basic**, and I mean
+basic **ORM**.
 
-We can now think of a *class* representing a *table* in the DB. And an
-*instance* of the class representing a specific *row* in the DB.
+We can now think of a **class** representing a **table** in the DB. And an
+**instance** of the class representing a specific **row** in the DB.
 
 There are 2 basic types of ORMs out there that implement the following
-two patterns: *Datamapping* and *ActiveRecord*. You can find more
+two patterns: **Datamapping** and **ActiveRecord**. You can find more
 information about the two patterns here:
 
 * ActiveRecord: https://en.wikipedia.org/wiki/Active_record_pattern
