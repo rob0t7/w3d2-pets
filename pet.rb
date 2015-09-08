@@ -34,6 +34,19 @@ class Pet
     nil
   end
 
+  def self.all
+    pets = []
+
+    sql = "SELECT * FROM pets;"
+    conn.exec(sql) do |response|
+      response.values.each do |row|
+        pets << Pet.new(row[1], row[2], row[3], row[4], row[0])
+      end
+    end
+
+    pets
+  end
+
   def self.conn
     PG.connect(dbname: 'w3d2')
   end
