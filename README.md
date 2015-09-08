@@ -11,6 +11,9 @@ based. Wouldn't it be nice to write database code and values using
 Well you can! Today we are going to write our own *basic*, and I mean
 basic *ORM*.
 
+We can now think of a *class* representing a *table* in the DB. And an
+*instance* of the class representing a specific *row* in the DB.
+
 There are 2 basic types of ORMs out there that implement the following
 two patterns: *Datamapping* and *ActiveRecord*. You can find more
 information about the two patterns here:
@@ -76,6 +79,21 @@ class Pet
 end
 
 ```
+
+Step 3 - Fetch 1 record by ID
+---------------------------------
+
+Lets implement the Pet#find function so we can retrieve a specific
+record from the DB. Notice that this is a class method, and the return
+value is an instance of Pet
+
+Also allowed the Pet instance to have an Id field.
+
+PG returns values in the form of an array of arrays (think 2D) where
+the arrays that are stored represent a row in the DB and the coloumn
+are in the position that they are defined in the schema.
+
+See the Diff to see what we did for this step.
 
 Requirements
 --------------
